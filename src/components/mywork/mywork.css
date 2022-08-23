@@ -1,0 +1,14 @@
+#my-work {
+    background-color: rgb(165, 190, 165);
+    height: 100vw;
+
+}
+
+.card {
+    outline: 1px solid;
+}
+
+.card-body {
+    outline: 1px solid red;
+    display: flex;
+}

@@ -1,0 +1,27 @@
+/* * {
+    box-sizing: border-box;
+} */
+
+#contact {
+    outline: 1px solid;
+    height: 50vw;
+    /* display: flex;
+    justify-content: space-around; */
+}
+
+.container {
+    outline: 1px solid;
+    width: 30vw;
+    padding: 20px;
+    background-color: beige;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+input {
+    margin: 10px;
+}
