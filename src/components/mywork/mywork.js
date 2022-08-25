@@ -1,28 +1,33 @@
 import React from 'react'
 import './mywork.css';
-// import { DiJavascript } from "react-icons/di";
-import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
+//import project list object
+import { ProjectList } from "../projects/projectList";
 
 const MyWork = () => {
     return (
         <>
-            <section id="my-work">
-                {/* <Row xs={1} md={3} className="g-4">
-                    <Col>
-                        <Card className='card'>
-                            <Card.Body>
-                                <Card.Title><h1 className='title'>title</h1></Card.Title>
-                                <Card.Img variant="top" src='' />
-                                <Card.Text>
-                                    <p className='description'>description</p>
-                                </Card.Text>
-                            </Card.Body>
-                    </Col>
-                </Row> */}
+            <div>
+                <div class="project-container" id='my-work'>
 
-            </section>
+                    {ProjectList.map((project, idx) => {
+                        return (
+                            <section id="projects">
+
+                                <div className="cards">
+                                    <img id="project-images" src={project.image} alt=""></img>
+                                    <h1 className='name'>{project.name}</h1>
+                                    <p className='skills'>{project.skills}</p>
+                                    <a className="project-links" href={project.github} target="_blank" rel="noreferrer" >Github</a>
+                                    <a className="project-links" href={project.website} target="_blank" rel="noreferrer" >Website</a>
+
+                                </div>
+
+                            </section>
+                        )
+                    }
+                    )}
+                </div>
+            </div>
         </>
     )
 }

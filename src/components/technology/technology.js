@@ -3,21 +3,21 @@ import './technology.css';
 
 const Technology = () => {
     return (
-        <section id="technology">
-            <div className='containers'>
+        <section id="technology" >
+            <div >
                 <h1>front end</h1>
-                <img className="tech-images" src='images/html.png'></img>
-                <img className="tech-images" src='images/css.png'></img>
-                <img className="tech-images" src='images/javascript.png'></img>
-                <img className="tech-images" src='images/react.png'></img>
-            </div>
-            <div className='containers'>
+                <p>HTML, CSS, Javascript, React, NPM, Bootstrap</p>
                 <h1>back end</h1>
-                <img className="tech-images" src='images/mysql.png'></img>
-                <img className="tech-images" src='images/mongodb.png'></img>
-                <img className="tech-images" src='images/java.png'></img>
-                <img className="tech-images" src='images/node.png'></img>
-                <img className="tech-images" src='images/express.png'></img>
+                <p>NodeJS, ExpressJS, MongoDB, MySQL</p>
+            </div>
+            <div className="tech">
+                <img src="/images/html.png" alt="html logo"></img>
+                <img src="/images/css.png" alt="css logo"></img>
+                <img src="/images/javascript.png" alt="javascript logo"></img>
+                <img src="/images/react.png" alt="react logo"></img>
+                <img src="/images/nodejs.png" alt="nodejs logo"></img>
+                <img src="/images/mongoDB.png" alt="mongdb logo"></img>
+                <img src="/images/mysql.png" alt="mysql logo"></img>
             </div>
         </section>
     )

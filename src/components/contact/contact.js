@@ -1,8 +1,10 @@
 import React, { useRef } from 'react'
 import './contact.css';
+//import emailjs library 
 import emailjs from "@emailjs/browser";
-// import { Formik, Form, Field, ErrorMessage } from "formik";
-// import * as Yup from "yup";
+//import icons 
+import { HiLocationMarker, HiOutlineMail } from "react-icons/hi";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
 
 const Contact = () => {
     const form = useRef();
@@ -10,7 +12,7 @@ const Contact = () => {
     //send email through emailjs
     function sendEmail(e) {
         e.preventDefault();
-        emailjs.sendForm('service_b3t8ppg', 'template_ulaw7cv', form.current, 'JiXGMxtYN7x6lYPOt')
+        emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
             .then((result) => {
                 console.log(result.text);
             }, (error) => {
@@ -23,18 +25,32 @@ const Contact = () => {
         <>
             <section id="contact">
                 <div className="container">
-                    <h1>Get in touch!</h1>
                     <form ref={form} onSubmit={sendEmail}>
+                        <h1>Get in touch!</h1>
                         <label>Name</label>
-                        <input type="text" name="name" />
+                        <input type="text" name="name" required />
                         <label>Subject</label>
-                        <input type="text" name="subject" />
+                        <input type="text" name="subject" required />
                         <label>Email</label>
-                        <input type="email" name="email" />
+                        <input type="email" name="email" required />
                         <label>Message</label>
-                        <textarea name="message" />
+                        <textarea name="message" rows="6" />
                         <input type="submit" value="Send" />
                     </form>
+                    <div className='info'>
+                        <div id="icons">
+                            <HiLocationMarker className='icon' />
+                            <HiOutlineMail className='icon' />
+                            <BsLinkedin className="icon" />
+                            <BsGithub className="icon" />
+                        </div>
+                        <div id="caption">
+                            <h1>Charlotte, NC</h1>
+                            <h1>eban.hdit@gmail.com</h1>
+                            <h1>linkedin.com/hditeban</h1>
+                            <h1>github.com/hyeb96</h1>
+                        </div>
+                    </div>
                 </div>
             </section>
         </>

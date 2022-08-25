@@ -1,29 +1,43 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './navbar.css';
-// import { Link } from "react-router-dom";
-import { HashLink as Link } from 'react-router-hash-link'
+//import react scroll library for navigation links
+import { Link } from 'react-scroll';
+//import icons 
+import { FaBars, FaTimes } from 'react-icons/fa'
+
 
 const Navbar = () => {
+
+    const [click, setClick] = useState(false)
+    const handleClick = () => setClick(!click)
+
+    const closeMenu = () => setClick(false)
+
     return (
-        <div id="navbar">
+        <nav id="navbar">
             <div id='logo'>
                 <img id='logo-image' src='images/logo.png' alt='logo'></img>
             </div>
-            <ul>
-                <li>
-                    <Link to="/" smooth>Home</Link>
+            <div id='hamburger' onClick={handleClick}>
+                {click ? (<FaTimes size={50} />)
+                    : (<FaBars size={50} />)}
+
+            </div>
+            <ul className={click ? "nav-menu active" : "nav-menu"}>
+                <li className='nav-item'>
+                    <Link to="about-me" spy={true} smooth={true} offset={-200} duration={500} onClick={closeMenu} >Home</Link>
                 </li>
-                <li>
-                    <Link to="#my-work" smooth >My works</Link>
+                <li className='nav-item'>
+                    <Link to="my-work" spy={true} smooth={true} offset={-200} duration={500} onClick={closeMenu} >My works</Link>
                 </li>
-                <li>
-                    <Link to="#technology" smooth >Technology</Link>
+                <li className='nav-item'>
+                    <Link to="technology" spy={true} smooth={true} offset={-200} duration={500} onClick={closeMenu} >Technology</Link>
                 </li>
-                <li>
-                    <Link to="#contact" smooth >Contact</Link>
+                <li className='nav-item'>
+                    <Link to="contact" spy={true} smooth={true} offset={-200} duration={500} onClick={closeMenu} >Contact</Link>
                 </li>
             </ul>
-        </div>
+        </nav>
     )
 }
 

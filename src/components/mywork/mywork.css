@@ -1,14 +1,61 @@
-#my-work {
-    background-color: rgb(165, 190, 165);
-    height: 100vw;
-
+.project-container {
+    background-color: rgb(227, 232, 232);
 }
 
-.card {
-    outline: 1px solid;
+#projects {
+    background-color: white;
+    display: inline-block;
+    padding: 30px;
+    margin: 30px;
+    border: none;
+    border-bottom: 1px solid rgb(166, 195, 199);
 }
 
-.card-body {
-    outline: 1px solid red;
-    display: flex;
+.cards {
+    width: 30vw;
+    height: auto;
+}
+
+.name {
+    color: rgb(145, 191, 191);
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+.skills {
+    font-size: 1.5vw;
+}
+
+.cards img {
+    border: 1px solid rgb(225, 225, 225);
+    width: 30vw;
+}
+
+.project-links {
+    font-size: 1.3vw;
+}
+
+/* tablet responsive */
+@media (max-width: 820px) {
+    #projects {
+        width: 70vw;
+    }
+
+    .cards {
+        width: 100%;
+        height: auto;
+    }
+
+    #project-images {
+        width: 100%;
+    }
+
+    .name {
+        font-size: 5vw;
+    }
+
+    .skills {
+        font-size: 3vw;
+    }
+
 }

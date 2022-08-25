@@ -1,26 +1,36 @@
-#about-me {
+#about-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    max-width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
 }
 
 #profile {
     padding: 30px;
-    width: 50%;
+}
+
+#profile-photo {
+    width: 20vw;
+}
+
+.title h1 {
+    color: #a5bdc4;
 }
 
 .links {
-    display: block;
+    display: flex;
+    justify-content: center;
+
 }
 
 .icons {
-    width: 20px;
-    height: 20px;
-    padding: 20px;
+    width: 30px;
+    height: 30px;
 }
 
 #description {
-    background-color: rgb(226, 232, 237);
-    width: 50%;
+    background-color: rgb(210, 227, 240);
     padding: 50px;
 }
 
@@ -33,10 +43,27 @@
     padding: 10px;
 }
 
-button {
+.button {
     border: none;
     background-color: rgb(196, 171, 142);
     margin: 10px;
     padding: 5px;
     width: 100px;
+}
+
+/* tablet responsive */
+@media (max-width: 820px) {
+    #about-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #profile {
+        margin: auto;
+        width: 90%;
+    }
+
+    #description {
+        margin: auto;
+    }
 }
