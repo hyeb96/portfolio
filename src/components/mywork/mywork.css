@@ -5,7 +5,7 @@
 #projects {
     background-color: white;
     display: inline-block;
-    padding: 30px;
+    padding: 20px;
     margin: 30px;
     border: none;
     border-bottom: 1px solid rgb(166, 195, 199);
@@ -31,8 +31,21 @@
     width: 30vw;
 }
 
+#buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+}
+
 .project-links {
-    font-size: 1.3vw;
+    font-size: 1.5vw;
+}
+
+.cards button {
+    padding: 1px;
+    border: none;
+    border-radius: 50px;
 }
 
 /* tablet responsive */
@@ -58,4 +71,20 @@
         font-size: 3vw;
     }
 
+    .project-links {
+        font-size: 3vw;
+    }
+
+    #buttons {
+        width: 70%;
+        margin: auto;
+    }
+
+}
+
+@media (max-width: 375px) {
+    #buttons {
+        width: 100%;
+        margin: auto;
+    }
 }

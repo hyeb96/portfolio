@@ -16,7 +16,7 @@ const Navbar = () => {
     return (
         <nav id="navbar">
             <div id='logo'>
-                <img id='logo-image' src='images/logo.png' alt='logo'></img>
+                <Link to="about-me" smooth={true} offset={-200} duration={500}> <img id='logo-image' src='images/logo.png' alt='logo'></img></Link>
             </div>
             <div id='hamburger' onClick={handleClick}>
                 {click ? (<FaTimes size={50} />)

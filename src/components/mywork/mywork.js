@@ -17,9 +17,10 @@ const MyWork = () => {
                                     <img id="project-images" src={project.image} alt=""></img>
                                     <h1 className='name'>{project.name}</h1>
                                     <p className='skills'>{project.skills}</p>
-                                    <a className="project-links" href={project.github} target="_blank" rel="noreferrer" >Github</a>
-                                    <a className="project-links" href={project.website} target="_blank" rel="noreferrer" >Website</a>
-
+                                    <div id="buttons">
+                                        <button><a className="project-links" href={project.github} target="_blank" rel="noreferrer" >Github</a></button>
+                                        <button><a className="project-links" href={project.website} target="_blank" rel="noreferrer" >Website</a></button>
+                                    </div>
                                 </div>
 
                             </section>
