@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     background-color: rgb(226, 232, 237);
+    padding: 50px;
 }
 
 .container {
@@ -83,5 +84,13 @@ textarea {
 
     .icon {
         padding: 0;
+    }
+}
+
+@media (max-width: 375px) {
+    #contact {
+        padding: 0;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 }

@@ -25,7 +25,7 @@ const Contact = () => {
         <>
             <section id="contact">
                 <div className="container">
-                    <form ref={form} onSubmit={sendEmail}>
+                    <form ref={form} onSubmit={sendEmail} autocomplete="off" >
                         <h1>Get in touch!</h1>
                         <label>Name</label>
                         <input type="text" name="name" required />
