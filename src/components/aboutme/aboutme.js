@@ -11,14 +11,14 @@ function AboutMe() {
                 <div id="about-me"></div>
                 <div className="about-container" id="profile">
                     <img id="profile-photo" src="/images/profile2.png" alt="profile"></img>
-                    <span className="title">
+                    <div className="title">
                         <h1>Hdit Eban</h1>
                         <h5>Junior Software Developer</h5>
-                    </span>
-                    <span className="links">
+                    </div>
+                    <div className="links">
                         <a href="www.linkedin.com/in/hditeban" target="_blank" rel="noreferrer"><BsLinkedin className="icons" /></a>
                         <a href="https://github.com/hyeb96" target="_blank" rel="noreferrer"><BsGithub className="icons" /></a>
-                    </span>
+                    </div>
                 </div>
                 <div className="about-container" id="description">
                     <div className="caption">

@@ -1,7 +1,7 @@
 #about-container {
     display: flex;
-    justify-content: space-between;
-    max-width: 80%;
+    /* justify-content: space-between; */
+    max-width: 70%;
     margin: auto;
     margin-bottom: 20px;
 }
@@ -21,7 +21,6 @@
 .links {
     display: flex;
     justify-content: center;
-
 }
 
 .icons {
@@ -56,6 +55,7 @@
     #about-container {
         display: flex;
         flex-direction: column;
+        max-width: 90%;
     }
 
     #profile {
@@ -63,7 +63,53 @@
         width: 90%;
     }
 
+    #profile-photo {
+        width: 40vw;
+    }
+
+    .title h1 {
+        font-size: 40px;
+    }
+
+    .title h5 {
+        font-size: 30px;
+        margin-top: 0;
+    }
+
+    .icons {
+        width: 30px;
+        height: 30px;
+    }
+
+    .caption p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 375px) {
+
+    #profile-photo {
+        width: 50vw;
+    }
+
+    .title h1 {
+        font-size: 30px;
+    }
+
+    .title h5 {
+        font-size: 20px;
+    }
+
+    .icons {
+        width: 25px;
+        height: 25px;
+    }
+
     #description {
-        margin: auto;
+        padding: 20px;
+    }
+
+    .caption p {
+        font-size: 15px;
     }
 }

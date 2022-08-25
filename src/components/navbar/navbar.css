@@ -23,7 +23,7 @@ ul {
     margin-bottom: 0;
 }
 
-li {
+.nav-item {
     padding: 20px;
 }
 
@@ -70,8 +70,9 @@ a.active {
         width: 100px;
     }
 
-    ul {
-        outline: 1px solid;
+    .nav-item {
+        font-size: 50px;
+        margin: auto;
     }
 
     .nav-menu {
@@ -89,5 +90,16 @@ a.active {
 
     .nav-menu.active {
         left: 0;
+    }
+}
+
+@media (max-width: 375px) {
+
+    .nav-menu {
+        padding: 0;
+    }
+
+    .nav-item {
+        font-size: 30px;
     }
 }
