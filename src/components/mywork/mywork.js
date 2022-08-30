@@ -7,7 +7,7 @@ const MyWork = () => {
     return (
         <>
             <div>
-                <div class="project-container" id='my-work'>
+                <div className="project-container" id='my-work'>
 
                     {ProjectList.map((project, idx) => {
                         return (

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import './contact.css';
 //import emailjs library 
 import emailjs from "@emailjs/browser";
@@ -8,24 +8,28 @@ import { BsGithub, BsLinkedin } from "react-icons/bs";
 
 const Contact = () => {
     const form = useRef();
+    const [submit, setSubmit] = useState(false);
 
     //send email through emailjs
     function sendEmail(e) {
         e.preventDefault();
-        emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
+        emailjs.sendForm('service_b3t8ppg', 'template_ulaw7cv', form.current, 'JiXGMxtYN7x6lYPOt')
             .then((result) => {
                 console.log(result.text);
+                setSubmit(true);
+                // console.log(setSubmit);
             }, (error) => {
                 console.log(error.text);
             });
         e.target.reset();
     }
 
+
     return (
         <>
             <section id="contact">
                 <div className="container">
-                    <form ref={form} onSubmit={sendEmail} autocomplete="off" >
+                    <form ref={form} onSubmit={sendEmail} autoComplete="off" >
                         <h1>Get in touch!</h1>
                         <label>Name</label>
                         <input type="text" name="name" required />
@@ -36,6 +40,12 @@ const Contact = () => {
                         <label>Message</label>
                         <textarea name="message" rows="6" />
                         <input type="submit" value="Send" />
+
+                        {submit ? (
+                            <div className="submit-message">Message sent!</div>
+                        ) : (
+                            <div className='submit-message'></div>
+                        )}
                     </form>
                     <div className='info'>
                         <div id="icons">

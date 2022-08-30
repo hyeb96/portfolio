@@ -5,9 +5,9 @@ const Technology = () => {
     return (
         <section id="technology" >
             <div >
-                <h1>front end</h1>
+                <h1>Front end</h1>
                 <p>HTML, CSS, Javascript, React, NPM, Bootstrap</p>
-                <h1>back end</h1>
+                <h1>Back end</h1>
                 <p>NodeJS, ExpressJS, MongoDB, MySQL</p>
             </div>
             <div className="tech">
