@@ -16,7 +16,7 @@ function AboutMe() {
                         <h5>Junior Software Developer</h5>
                     </div>
                     <div className="links">
-                        <a href="www.linkedin.com/in/hditeban" target="_blank" rel="noreferrer"><BsLinkedin className="icons" /></a>
+                        <a href="https://www.linkedin.com/in/hditeban/" target="_blank" rel="noreferrer"><BsLinkedin className="icons" /></a>
                         <a href="https://github.com/hyeb96" target="_blank" rel="noreferrer"><BsGithub className="icons" /></a>
                     </div>
                 </div>
