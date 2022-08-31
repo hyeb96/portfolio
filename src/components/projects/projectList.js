@@ -12,7 +12,7 @@ export const ProjectList = [
         image: "/images/e-commerce-redesign.png",
         skills: "React, Bootstrap, Node.js, ExpressJS, MySQL",
         github: "https://github.com/hyeb96/e-commerce-v2",
-        website: "https://main.d84kkg3lg75vm.amplifyapp.com/",
+        website: "https://charming-meerkat-1a57ff.netlify.app/",
     },
     {
         name: "Hope Hack",
